@@ -1,7 +1,7 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/image.h"
-#include "../../include/helpers/color.h"
-#include "../../include/helpers/helper.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/image.h>
+#include <TinyEngine/helpers/color.h>
+#include <TinyEngine/helpers/helper.h>
 
 #include "model.h"
 
@@ -25,12 +25,12 @@ int main( int argc, char* args[] ) {
 	Instance particle(&flat);												//Make Particle System
 	particle.addBuffer(leaves);											//Add Matrices
 
-	Texture tex(image::load("leaf.png"));
+	Texture tex(image::load("assets/leaf.png"));
 
-	Shader particleShader({"shader/particle.vs", "shader/particle.fs"}, {"in_Quad", "in_Tex", "in_Model"});
-	Shader defaultShader({"shader/default.vs", "shader/default.fs"}, {"in_Position", "in_Normal"});
-	Shader depth({"shader/depth.vs", "shader/depth.fs"}, {"in_Position"});
-	Shader particledepth({"shader/particledepth.vs", "shader/particledepth.fs"}, {"in_Quad", "in_Tex", "in_Model"});
+	Shader particleShader({"assets/shader/particle.vs", "assets/shader/particle.fs"}, {"in_Quad", "in_Tex", "in_Model"});
+	Shader defaultShader({"assets/shader/default.vs", "assets/shader/default.fs"}, {"in_Position", "in_Normal"});
+	Shader depth({"assets/shader/depth.vs", "assets/shader/depth.fs"}, {"in_Position"});
+	Shader particledepth({"assets/shader/particledepth.vs", "assets/shader/particledepth.fs"}, {"in_Quad", "in_Tex", "in_Model"});
 	Billboard shadow(1600, 1600, false); 						//No Color Buffer
 
 	Model floor(construct_floor);

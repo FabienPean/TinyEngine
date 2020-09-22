@@ -1,6 +1,6 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/image.h"
-#include "../../include/helpers/color.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/image.h>
+#include <TinyEngine/helpers/color.h>
 
 #include "model.h"
 
@@ -25,8 +25,8 @@ int main( int argc, char* args[] ) {
 	Square2D flat;	//Flat square primitive for drawing billboard to screen
 
 	//Shader for drawing billboard to screen and for doing an automata step
-	Shader shader({"shader/billboard.vs", "shader/billboard.fs"}, {"in_Quad", "in_Tex"});
-	Shader automata({"shader/automata.vs", "shader/automata.fs"}, {"in_Quad", "in_Tex"});
+	Shader shader({"assets/shader/billboard.vs", "assets/shader/billboard.fs"}, {"in_Quad", "in_Tex"});
+	Shader automata({"assets/shader/automata.vs", "assets/shader/automata.fs"}, {"in_Quad", "in_Tex"});
 
 	Tiny::view.pipeline = [&](){
 

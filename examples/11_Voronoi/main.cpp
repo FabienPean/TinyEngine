@@ -1,6 +1,6 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/color.h"
-#include "../../include/helpers/image.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/color.h>
+#include <TinyEngine/helpers/image.h>
 
 #include "poisson.h"
 #include "model.h"
@@ -60,14 +60,14 @@ int main( int argc, char* args[] ) {
 
 	//Utility Classes
 	Square2D flat;
-	Shader voronoi({"shader/voronoi.vs", "shader/voronoi.fs"}, {"in_Quad", "in_Tex", "in_Centroid"});
+	Shader voronoi({"assets/shader/voronoi.vs", "assets/shader/voronoi.fs"}, {"in_Quad", "in_Tex", "in_Centroid"});
 
 	Billboard billboard(SIZE, SIZE);
-	Shader billboardshader({"shader/billboard.vs", "shader/billboard.fs"}, {"in_Quad", "in_Tex"});
+	Shader billboardshader({"assets/shader/billboard.vs", "assets/shader/billboard.fs"}, {"in_Quad", "in_Tex"});
 
 	//Filter Effects
-	Shader bubble({"shader/bubble.vs", "shader/bubble.fs"}, {"in_Quad", "in_Tex", "in_Centroid"}, {"centroids"});
-	Shader mosaic({"shader/mosaic.vs", "shader/mosaic.fs"}, {"in_Quad", "in_Tex", "in_Centroid"}, {"centroids"});
+	Shader bubble({"assets/shader/bubble.vs", "assets/shader/bubble.fs"}, {"in_Quad", "in_Tex", "in_Centroid"}, {"centroids"});
+	Shader mosaic({"assets/shader/mosaic.vs", "assets/shader/mosaic.fs"}, {"in_Quad", "in_Tex", "in_Centroid"}, {"centroids"});
 
 	//SSBO Centroids into Filters
 	bubble.buffer("centroids", centroids);
@@ -77,7 +77,7 @@ int main( int argc, char* args[] ) {
 	Instance instance(&flat);
 	instance.addBuffer(centroids);
 
-	Texture tex(image::load("starry_night.png")); //Load Texture with Image
+	Texture tex(image::load("assets/starry_night.png")); //Load Texture with Image
 
 	//Prepare Noise for jiggling the centroids
 	noise::module::Perlin perlin;

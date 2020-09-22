@@ -1,6 +1,6 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/image.h"
-#include "../../include/helpers/color.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/image.h>
+#include <TinyEngine/helpers/color.h>
 
 #include "effects.h"
 
@@ -12,9 +12,9 @@ int main( int argc, char* args[] ) {
 
 	Tiny::view.interface = interfaceFunc;
 
-	Texture tex(image::load("canyon.png"));		//Load Texture with Image
+	Texture tex(image::load("assets/canyon.png"));		//Load Texture with Image
 	Square2D flat;														//Create Primitive Model
-	Shader effect({"shader/effect.vs", "shader/effect.fs"}, {"in_Quad", "in_Tex"});
+	Shader effect({"assets/shader/effect.vs", "assets/shader/effect.fs"}, {"in_Quad", "in_Tex"});
 
 	Tiny::view.pipeline = [&](){
 

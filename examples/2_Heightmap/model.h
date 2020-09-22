@@ -31,7 +31,8 @@ void setup(){
   perlin.SetFrequency(1.0);
   perlin.SetPersistence(0.6);
 
-  float min, max = 0.0;
+  float min = 1e9f;
+  float max = 0.0f;
   for(int i = 0; i < dim.x; i++){
     for(int j = 0; j < dim.y; j++){
       heightmap[i][j] = perlin.GetValue(i*(1.0/dim.x), j*(1.0/dim.y), SEED);

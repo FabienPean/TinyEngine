@@ -1,5 +1,5 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/color.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/color.h>
 
 #include "model.h"
 
@@ -13,7 +13,7 @@ int main( int argc, char* args[] ) {
 	Tiny::event.handler  = eventHandler;
 	Tiny::view.interface = interfaceFunc;
 
-	Shader sdf({"shader/sdf.vs", "shader/sdf.fs"}, {"in_Quad", "in_Tex"});
+	Shader sdf({"assets/shader/sdf.vs", "assets/shader/sdf.fs"}, {"in_Quad", "in_Tex"});
 	Square2D flat;												//Flat geometry primitive
 
 	Tiny::view.pipeline = [&](){

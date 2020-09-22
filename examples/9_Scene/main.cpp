@@ -1,6 +1,6 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/color.h"
-#include "../../include/helpers/object.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/color.h>
+#include <TinyEngine/helpers/object.h>
 
 #include "model.h"
 
@@ -14,10 +14,10 @@ int main( int argc, char* args[] ) {
 	Tiny::event.handler  = eventHandler;
 	Tiny::view.interface = interfaceFunc;
 
-	Shader shader({"shader/default.vs", "shader/default.fs"}, {"in_Position", "in_Normal", "in_Color"});
-	Shader cubedepth({"shader/cubedepth.vs", "shader/cubedepth.gs", "shader/cubedepth.fs"}, {"in_Position"});
+	Shader shader({"assets/shader/default.vs", "assets/shader/default.fs"}, {"in_Position", "in_Normal", "in_Color"});
+	Shader cubedepth({"assets/shader/cubedepth.vs", "assets/shader/cubedepth.gs", "assets/shader/cubedepth.fs"}, {"in_Position"});
 
-	std::string path = "object/";
+	std::string path = "assets/object/";
 	Model lamp(obj::load, path+"Lamp");
 	Model table(obj::load, path+"Table");
 	Model chair(obj::load, path+"Chair");

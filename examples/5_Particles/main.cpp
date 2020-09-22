@@ -1,6 +1,6 @@
-#include "../../TinyEngine.h"
-#include "../../include/helpers/image.h"
-#include "../../include/helpers/color.h"
+#include <TinyEngine/TinyEngine.h>
+#include <TinyEngine/helpers/image.h>
+#include <TinyEngine/helpers/color.h>
 
 #include "model.h"
 
@@ -22,8 +22,8 @@ int main( int argc, char* args[] ) {
 	Instance particle(&model);			//Particle system based on this model
 	particle.addBuffer(models);			//Update particle system
 
-	Texture tex(image::load("dot.png"));		//Texture to draw onto the model
-	Shader particleShader({"shader/particle.vs", "shader/particle.fs"}, {"in_Quad", "in_Tex", "in_Model"});
+	Texture tex(image::load("assets/dot.png"));		//Texture to draw onto the model
+	Shader particleShader({"assets/shader/particle.vs", "assets/shader/particle.fs"}, {"in_Quad", "in_Tex", "in_Model"});
 
 	Tiny::view.pipeline = [&](){
 
