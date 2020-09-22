@@ -22,15 +22,15 @@ using slist = std::initializer_list<std::string>;
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/path.hpp>
 
-#include "include/utility/texture.cpp"              //Utility Classes
-#include "include/utility/shader.cpp"
-#include "include/utility/model.cpp"
-#include "include/utility/instance.cpp"
-#include "include/utility/target.cpp"
+#include "include/utility/texture.h"              //Utility Classes
+#include "include/utility/shader.h"
+#include "include/utility/model.h"
+#include "include/utility/instance.h"
+#include "include/utility/target.h"
 
-#include "include/view.cpp"
-#include "include/event.cpp"
-#include "include/audio.cpp"
+#include "include/view.h"
+#include "include/event.h"
+#include "include/audio.h"
 
 #include <chrono>
 
