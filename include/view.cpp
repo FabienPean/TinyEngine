@@ -53,7 +53,7 @@ bool View::init(std::string _name, int W, int H){
   io = ImGui::GetIO(); (void)io;
   ImGui_ImplSDL2_InitForOpenGL(gWindow, gContext);
   ImGui_ImplOpenGL3_Init("#version 330 core");
-  ImGui::StyleColorsCustom();
+  ImGui::StyleColorsDark();
 
   if(antialias)
   glEnable(GL_MULTISAMPLE);

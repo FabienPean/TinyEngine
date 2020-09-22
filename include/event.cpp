@@ -1,3 +1,5 @@
+#include<deque>
+
 struct Scroll{
   bool posx, posy, negx, negy;
   void reset(){
