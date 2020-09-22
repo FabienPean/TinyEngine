@@ -14,7 +14,7 @@ using slist = std::initializer_list<std::string>;
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
 #include <glm/glm.hpp>
-#include "glm/gtc/matrix_transform.hpp"
+#include <glm/gtc/matrix_transform.hpp>
 
 #include <sstream>                                  //File / Console IO
 #include <iostream>
@@ -22,15 +22,15 @@ using slist = std::initializer_list<std::string>;
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/path.hpp>
 
-#include "include/utility/texture.h"              //Utility Classes
-#include "include/utility/shader.h"
-#include "include/utility/model.h"
-#include "include/utility/instance.h"
-#include "include/utility/target.h"
+#include "utility/texture.h"              //Utility Classes
+#include "utility/shader.h"
+#include "utility/model.h"
+#include "utility/instance.h"
+#include "utility/target.h"
 
-#include "include/view.h"
-#include "include/event.h"
-#include "include/audio.h"
+#include "view.h"
+#include "event.h"
+#include "audio.h"
 
 #include <chrono>
 
