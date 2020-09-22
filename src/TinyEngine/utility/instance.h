@@ -30,7 +30,7 @@ void Instance::addBuffer(std::vector<D>& buf){
 
   glBindVertexArray(m->vao);
   glBindBuffer(GL_ARRAY_BUFFER, instance);  //Bind Instance Buffer and Data
-  glBufferData(GL_ARRAY_BUFFER, SIZE*sizeof(D), &buf[0], GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, SIZE*sizeof(D), SIZE?&buf[0]:nullptr, GL_STATIC_DRAW);
 
   configBuffer<D>(instance);
 }
@@ -58,7 +58,7 @@ void Instance::updateBuffer(std::vector<D>& buf, int index){
   glBindVertexArray(m->vao);
   glBindBuffer(GL_ARRAY_BUFFER, instances[index]);  //Bind Instance Buffer and Data
   if(buf.size() != SIZE)  glBufferData(GL_ARRAY_BUFFER, buf.size()*sizeof(D), &buf[0], GL_STATIC_DRAW);
-  else                    glBufferSubData(GL_ARRAY_BUFFER, 0, SIZE*sizeof(D), &buf[0]);
+  else                    glBufferSubData(GL_ARRAY_BUFFER, 0, SIZE*sizeof(D), SIZE?&buf[0]:nullptr);
   SIZE = buf.size();
 }
 
