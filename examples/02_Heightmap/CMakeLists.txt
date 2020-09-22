@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(Voronoi)
+project(Heightmap)
 
 add_executable(${PROJECT_NAME} main.cpp)
 set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:${PROJECT_NAME}>)

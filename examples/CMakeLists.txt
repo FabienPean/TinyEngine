@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.13.0)
+
+project(Examples)
+
+add_subdirectory(00_Empty)
+add_subdirectory(01_Image)
+add_subdirectory(02_Heightmap)
+add_subdirectory(03_Automata)
+add_subdirectory(04_Julia)
+add_subdirectory(05_Particles)
+add_subdirectory(06_Tree)
+add_subdirectory(07_SDF)
+add_subdirectory(08_Raymarch)
+add_subdirectory(09_Scene)
+add_subdirectory(10_Audio)
+add_subdirectory(11_Voronoi)
