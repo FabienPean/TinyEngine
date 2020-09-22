@@ -1,11 +1,12 @@
 #include <functional>
 #include <initializer_list>
+#include <string>
 using Handle = std::function<void()>;
 using slist = std::initializer_list<std::string>;
 
-#include "include/imgui/imgui.h"                    //Interface Dependencies
-#include "include/imgui/imgui_impl_sdl.h"
-#include "include/imgui/imgui_impl_opengl3.h"
+#include <imgui.h>//Interface Dependencies
+#include <imgui_impl_sdl.h>
+#include <imgui_impl_opengl3.h>
 
 #include <GL/glew.h>                                //Rendering Dependencies
 #include <SDL2/SDL.h>
